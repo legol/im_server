@@ -1,0 +1,16 @@
+TARGET_INC_PATH=../include/ 
+TARGET_LIB_PATH=../lib/
+SHARE_INC_PATH=../share/
+
+# for gcc version <= 2.96
+#Macro: _GNU_SOURCE
+#  If you define this macro, everything is included: ISO C89,
+#  ISO C99, POSIX.1, POSIX.2, BSD, SVID, X/Open, LFS, and GNU
+#  extensions.  In the cases where POSIX.1 conflicts with BSD, the
+#  POSIX definitions take precedence.
+
+
+DC=g++ -g -Wall -I$(SHARE_INC_PATH) -o $@ -c $<
+DT=g++ -g -Wall -o $@ $^
+
+
